@@ -19,8 +19,7 @@ export function createHero() {
         <button class="btn-primary" onclick="window.open('https://github.com/AngelMaroto/TFG-FIM-Grafico/releases/tag/v1.0.0')">
           Descargar
         </button>
-        <button class="btn-ghost">Ver demo ↓</button>
-      </div>
+<button class="btn-ghost" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Ver demo ↓</button>      </div>
       <div class="hero-scroll-hint">
         <div class="scroll-line"></div>
         <span>Scroll</span>
@@ -30,21 +29,10 @@ export function createHero() {
 }
 
 export function animateHero() {
-    const tl = gsap.timeline({ delay: 0.3 })
-    tl.to('.hero-label',   { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
-        .to('.hero-title',   { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.4')
-        .to('.hero-sub',     { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
-        .to('.hero-buttons', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-        .to('.hero-scroll-hint', { opacity: 1, duration: 0.6 }, '-=0.2')
-    gsap.to('#hero', {
-        scrollTrigger: {
-            trigger: '.sticky-wrapper',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true,
-        },
-        opacity: 0.1,
-        scale: 0.95,
-        ease: 'none'
-    })
+    const tl = gsap.timeline({delay: 0.3})
+    tl.to('.hero-label', {opacity: 1, y: 0, duration: 0.7, ease: 'power3.out'})
+        .to('.hero-title', {opacity: 1, y: 0, duration: 0.9, ease: 'power3.out'}, '-=0.4')
+        .to('.hero-sub', {opacity: 1, y: 0, duration: 0.7, ease: 'power3.out'}, '-=0.5')
+        .to('.hero-buttons', {opacity: 1, y: 0, duration: 0.6, ease: 'power3.out'}, '-=0.4')
+        .to('.hero-scroll-hint', {opacity: 1, duration: 0.6}, '-=0.2')
 }

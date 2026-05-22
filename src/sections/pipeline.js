@@ -14,7 +14,7 @@ export function createPipeline() {
 
         <div class="pipeline-flow">
 
-<div class="pipe-step anim-fade-up" data-step="0">
+            <div class="pipe-step" data-step="0">
             <div class="pipe-step-left">
               <div class="pipe-badge">Capa 01</div>
               <h3 class="pipe-title">Agente Python</h3>
@@ -136,9 +136,5 @@ export function createPipeline() {
   `
 }
 export function animatePipeline() {
-    gsap.from('#pipeline .section-header', {
-        scrollTrigger: { trigger: '#pipeline .section-header', start: 'top 85%', once: true },
-        immediateRender: false,
-        y: 60, opacity: 0, duration: 0.9, ease: 'power3.out'
-    })
+
 }

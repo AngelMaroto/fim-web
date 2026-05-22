@@ -18,9 +18,7 @@ import { initCursor } from './components/cursor.js'
 document.querySelector('#app').innerHTML = `
   <canvas id="bg"></canvas>
   ${createNav()}
-  <div class="sticky-wrapper">
-    ${createHero()}
-  </div>
+  ${createHero()}
   <main>
     ${createFeatures()}
     ${createPipeline()}

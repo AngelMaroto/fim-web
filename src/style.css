@@ -26,6 +26,11 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  position: relative;
+  z-index: 10;
+}
+
 canvas#bg {
   position: fixed;
   top: 0; left: 0;
@@ -106,7 +111,9 @@ nav {
   justify-content: center;
   text-align: center;
   padding: 0 2rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .hero-label {
@@ -227,6 +234,7 @@ nav {
   z-index: 10;
   margin-top: -2px;
   background: #080d13;
+  isolation: isolate;
 }
 
 .features-inner {
@@ -354,12 +362,6 @@ nav {
   opacity: 1;
 }
 
-.sticky-wrapper {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  height: 100vh;
-}
 
 main {
   position: relative;
@@ -372,7 +374,9 @@ main {
   position: relative;
   z-index: 10;
   padding-bottom: 8rem;
+  padding-top: 2rem;
   border-top: 1px solid rgba(0,255,159,0.06);
+  margin-top: 2rem;
 }
 
 .pipeline-inner {
@@ -1394,4 +1398,10 @@ body::after {
   .footer-links {
     grid-template-columns: 1fr;
   }
+}
+
+#pipeline, #stack, #demo, #install, #footer {
+  background: #060b10;
+  position: relative;
+  z-index: 10;
 }
