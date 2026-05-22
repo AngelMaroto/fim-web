@@ -36,7 +36,6 @@ export function animateHero() {
         .to('.hero-sub',     { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
         .to('.hero-buttons', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
         .to('.hero-scroll-hint', { opacity: 1, duration: 0.6 }, '-=0.2')
-// Hero se desvanece al hacer scroll
     gsap.to('#hero', {
         scrollTrigger: {
             trigger: '.sticky-wrapper',
@@ -44,7 +43,8 @@ export function animateHero() {
             end: 'bottom top',
             scrub: true,
         },
-        opacity: 0,
+        opacity: 0.1,
         scale: 0.95,
         ease: 'none'
-    })}
+    })
+}

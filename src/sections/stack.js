@@ -33,15 +33,12 @@ export function createStack() {
     <section id="stack">
       <div class="stack-inner">
 
-<div class="section-header anim-fade-up">
-<div class="stack-categories anim-fade-up anim-delay-2">
-<div class="stack-grid anim-fade-up anim-delay-3">
+        <div class="section-header anim-fade-up">
           <p class="section-label">// 03 — Stack</p>
-          <br>
           <h2 class="section-title">Tecnologías</h2>
         </div>
 
-        <div class="stack-categories">
+        <div class="stack-categories anim-fade-up anim-delay-2">
           ${Object.entries(categoryColors).map(([cat, color]) => `
             <button class="stack-filter active" data-category="${cat}" style="--cat-color: ${color}">
               ${cat}
@@ -49,8 +46,8 @@ export function createStack() {
           `).join('')}
         </div>
 
-        <div class="stack-grid">
-          ${technologies.map((tech, i) => `
+        <div class="stack-grid anim-fade-up anim-delay-3">
+          ${technologies.map((tech) => `
             <div class="stack-pill" data-category="${tech.category}" style="--tech-color: ${categoryColors[tech.category]}">
               <span class="stack-pill-dot"></span>
               <span class="stack-pill-name">${tech.name}</span>
