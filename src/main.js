@@ -14,6 +14,7 @@ import { createInstall, animateInstall } from './sections/install.js'
 import { createFooter } from './sections/footer.js'
 import { initScrollTop } from './components/scrollTop.js'
 import { initCursor } from './components/cursor.js'
+import { inject } from '@vercel/analytics'
 
 document.querySelector('#app').innerHTML = `
   <canvas id="bg"></canvas>
@@ -39,3 +40,4 @@ animateInstall()
 initScrollTop()
 initCursor()
 observeElements('.anim-fade-up, .anim-fade-left, .anim-fade-right')
+inject()
