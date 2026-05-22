@@ -39,7 +39,7 @@ export function createFooter() {
 
         <div class="footer-bottom">
           <div class="footer-bottom-left">
-            <p class="footer-copy">© 2025 Ángel Maroto García</p>
+            <p class="footer-copy">© 2026 Ángel Maroto García</p>
             <p class="footer-tutor">Desarrollador multiplataforma</p>
           </div>
           <div class="footer-bottom-right">
