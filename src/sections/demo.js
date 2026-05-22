@@ -3,24 +3,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const screenshots = [
-    {
-        id: 1,
-        file: 'public/screenshots/screenshot-1.png',
-        title: 'Grafo de nodos',
-        desc: 'Visualización en tiempo real del filesystem con código de colores por severidad'
-    },
-    {
-        id: 2,
-        file: 'public/screenshots/screenshot-2.png',
-        title: 'Línea de tiempo',
-        desc: 'Timeline completa con eventos FIM, slider temporal y filtros avanzados'
-    },
-    {
-        id: 3,
-        file: 'public/screenshots/screenshot-3.png',
-        title: 'Pantalla principal',
-        desc: 'Vista general de la aplicación con grafo interactivo y panel de alertas'
-    },
+    { id: 1, file: '/screenshots/screenshot-1.png', title: 'Grafo de nodos', desc: 'Visualización en tiempo real del filesystem con código de colores por severidad' },
+    { id: 2, file: '/screenshots/screenshot-2.png', title: 'Línea de tiempo', desc: 'Timeline completa con eventos FIM, slider temporal y filtros avanzados' },
+    { id: 3, file: '/screenshots/screenshot-3.png', title: 'Pantalla principal', desc: 'Vista general de la aplicación con grafo interactivo y panel de alertas' },
 ]
 
 export function createDemo() {
